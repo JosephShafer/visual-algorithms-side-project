@@ -20,7 +20,7 @@ class Cell{
         if(this.alive)
             fill(255);
         else
-        fill((this.r + this.generation*1.001) % 255, (this.g + this.generation*1.002) % 255, (this.b + this.generation*1.003) % 255);
+        fill((this.r + this.generation*1.031) % 255, (this.g + this.generation*1.002) % 255, (this.b + this.generation*1.003) % 255);
         stroke(0);
         rect(this.x, this.y, resolution - 1, resolution);
     }
@@ -52,8 +52,6 @@ function setup() {
     frameRate(60);
     grid = create2DArray(cols, rows);
     createCanvas(640, 640);
-    button = createButton('Pause');
-    button.mousePressed(() => pause = !pause);
 }
 
 function touchMoved() {
